@@ -26,16 +26,16 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
-//app.use(cors());
+app.use(cors());
 
-// CORS configuration
-const corsOptions = {
-    origin: 'https://vercel-chat-gpt-client.vercel.app', // Specify your client app's domain
-    optionsSuccessStatus: 200 // For legacy browser support
-  };
+// // CORS configuration
+// const corsOptions = {
+//     origin: 'https://vercel-chat-gpt-client.vercel.app', // Specify your client app's domain
+//     optionsSuccessStatus: 200 // For legacy browser support
+//   };
   
-  // Use the CORS middleware with the specified options
-  app.use(cors(corsOptions));
+//   // Use the CORS middleware with the specified options
+//   app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
     res.send("Hello, this is the root of the ChatGPT server.");
