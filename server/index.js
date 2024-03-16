@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 
 // CORS configuration
 const corsOptions = {
-    origin: 'https://vercel-chat-gpt-client.vercel.app', // Specify your client app's domain
+    origin: 'https://vercel-chat-gpt-client.vercel.app/', // Specify your client app's domain
     optionsSuccessStatus: 200 // For legacy browser support
   };
   
