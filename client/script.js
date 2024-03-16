@@ -85,7 +85,8 @@ const chatLog = document.getElementById('chat-log');
                 answer5rating : ans5rating.value
             }                         
             //**** */           
-            fetch('http://localhost:3000/compare', {
+            //fetch('http://localhost:3000/compare', {
+            fetch('https://vercel-chat-gpt-server-hnywa0phy-idan-levins-projects.vercel.app/compare', {
                 
                 method:'POST', 
                 headers:{
