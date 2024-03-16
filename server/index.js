@@ -6,15 +6,6 @@ import { OpenAI } from "openai";
 import dotenv from "dotenv"
 dotenv.config();
 
-// CORS configuration
-const corsOptions = {
-    origin: 'https://vercel-chat-gpt-client.vercel.app', // Specify your client app's domain
-    optionsSuccessStatus: 200 // For legacy browser support
-  };
-  
-  // Use the CORS middleware with the specified options
-  app.use(cors(corsOptions));
-
 const openai = new OpenAI({
         
     apiKey: "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"
@@ -37,7 +28,14 @@ const port = 3000;
 app.use(bodyParser.json());
 //app.use(cors());
 
-
+// CORS configuration
+const corsOptions = {
+    origin: 'https://vercel-chat-gpt-client.vercel.app', // Specify your client app's domain
+    optionsSuccessStatus: 200 // For legacy browser support
+  };
+  
+  // Use the CORS middleware with the specified options
+  app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
     res.send("Hello, this is the root of the ChatGPT server.");
